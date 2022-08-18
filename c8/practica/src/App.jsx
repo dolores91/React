@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Button from './Button'
 import "./App.css";
+import ColorsF from './components/ColorsF';
 
 export default class App extends Component {
   colors = ["RED","BLUE","YELLOW", "GREEN","ORANGE","MAGENTA","BROWN","LIME"]
@@ -34,11 +35,13 @@ export default class App extends Component {
 
   render() {
     return (
-      <div className="container">
+    <div className="container">
+      
         <div className="panel">
           {this.state.colores.map(color => <div key={color} className={color}>{color}</div>)}
         </div>
-        <Button fn={this.shuffle} />
+    <Button fn={this.shuffle} />*
+
       </div>
 
     )
